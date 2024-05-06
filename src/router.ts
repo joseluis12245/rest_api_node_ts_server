@@ -20,7 +20,6 @@ router.post(
   //Validation
   body("name").notEmpty().withMessage("This name cant be empty"),
   body("price")
-    .notEmpty()
     .isNumeric()
     .withMessage("Value is not valid")
     .notEmpty()
