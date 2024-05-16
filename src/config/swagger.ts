@@ -1,4 +1,5 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import { SwaggerUiOptions } from "swagger-ui-express";
 
 const options: swaggerJSDoc.Options = {
   swaggerDefinition: {
@@ -21,5 +22,14 @@ const options: swaggerJSDoc.Options = {
 };
 
 const swaggerSpec = swaggerJSDoc(options)
+
+
+// For image and title
+const swaggerUiOptions: SwaggerUiOptions = {
+    customCss: `
+      .topbar-wrapper .link {
+      }
+    `
+}
 
 export default swaggerSpec
